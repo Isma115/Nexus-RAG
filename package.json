@@ -1,0 +1,30 @@
+{
+  "name": "nexus-rag",
+  "version": "0.1.0",
+  "description": "RAG local para iterar documentos de diversas fuentes (de momento solo local). Usuarios multi-cuenta preparados a futuro.",
+  "main": "electron/main.js",
+  "private": true,
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "dev": "electron electron/main.js",
+    "dev:tools": "ELECTRON_OPEN_DEVTOOLS=1 electron electron/main.js",
+    "start": "node server/app.js",
+    "server": "node server/app.js",
+    "ingest": "node tools/ingest.js",
+    "reindex": "node tools/reindex.js",
+    "export": "node tools/export.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^17.4.2",
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.5.2",
+    "jsonwebtoken": "^9.0.3"
+  },
+  "devDependencies": {
+    "electron": "^44.4.5"
+  }
+}
